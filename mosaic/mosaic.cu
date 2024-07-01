@@ -1,7 +1,7 @@
 #include "mosaic.h"
 #include <npp.h>
 #include <cuda_runtime.h>
-// #include <opencv2/opencv.hpp>
+#include <opencv2/opencv.hpp>
 #include <filesystem>
 #include <iostream>
 
