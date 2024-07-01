@@ -10,6 +10,7 @@
 
 ```bash
 git clone 'https://github.com/wmarini/mosaic.git'
+cd mosaic
 ```
 
 You can also download the [Zip](https://github.com) and extract in your local machine.  
@@ -17,8 +18,8 @@ You can also download the [Zip](https://github.com) and extract in your local ma
 ## Build the program
 
 ```bash
-cd build/
-cmake -G Ninja -DCMAKE_BUILD_TYPE="Release" ..
+mkdir build && cd build/
+cmake -DCMAKE_BUILD_TYPE="Release" ..
 ```
 
 ```bash
