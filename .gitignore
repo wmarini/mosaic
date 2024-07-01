@@ -30,3 +30,14 @@
 *.exe
 *.out
 *.app
+
+build/
+data/
+.git/
+
+*.i
+*.ii
+*.gpu
+*.ptx
+*.cubin
+*.fatbin
