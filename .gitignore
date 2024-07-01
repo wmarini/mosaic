@@ -38,6 +38,7 @@ data/
 !data/.gitkeep
 
 .git/
+.vscode/
 
 *.i
 *.ii

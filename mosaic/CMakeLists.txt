@@ -2,7 +2,7 @@
 find_package(OpenCV REQUIRED)
 include_directories(${OpenCV_INCLUDE_DIRS})
 link_directories(${OpenCV_LIB_DIR})
-link_libraries(${OpenCV_LIBS})
+# link_libraries(${OpenCV_LIBS})
 
 # CUDA
 include_directories("${CMAKE_SOURCE_DIR}/include/mosaic")
@@ -11,7 +11,13 @@ add_library(mosaic STATIC
     "mosaic.cu"
     "common.cu"
 )
-target_compile_features(mosaic PUBLIC cxx_std_14)
+
+if(CMAKE_CXX_COMPILER_VERSION VERSION_GREATER_EQUAL 11)
+    target_compile_features(mosaic PUBLIC cxx_std_17)
+else()
+    target_compile_features(mosaic PUBLIC cxx_std_14)
+endif()
+
 target_link_libraries(mosaic
     PUBLIC
         cuda
