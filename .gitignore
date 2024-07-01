@@ -32,7 +32,11 @@
 *.app
 
 build/
+
 data/
+!data/lenna.png
+!data/.gitkeep
+
 .git/
 
 *.i
