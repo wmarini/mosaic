@@ -12,11 +12,12 @@ add_library(mosaic STATIC
     "common.cu"
 )
 
-if(CMAKE_CXX_COMPILER_VERSION VERSION_GREATER_EQUAL 11)
-    target_compile_features(mosaic PUBLIC cxx_std_17)
-else()
-    target_compile_features(mosaic PUBLIC cxx_std_14)
-endif()
+# if(CMAKE_CXX_COMPILER_VERSION VERSION_GREATER_EQUAL 11)
+#     target_compile_features(mosaic PUBLIC cxx_std_17)
+# else()
+#     target_compile_features(mosaic PUBLIC cxx_std_14)
+# endif()
+target_compile_features(mosaic PUBLIC cxx_std_17)
 
 target_link_libraries(mosaic
     PUBLIC
@@ -26,7 +27,7 @@ target_link_libraries(mosaic
         nppif_static
         nppc_static
         culibos
-        ${OpenCV_LIBS}
+        # ${OpenCV_LIBS}
 )
 set_property(TARGET ${target_name} 
         PROPERTY CUDA_SEPARABLE_COMPILATION ON)

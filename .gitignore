@@ -40,6 +40,8 @@ data/
 .git/
 .vscode/
 
+AppDir/
+
 *.i
 *.ii
 *.gpu
