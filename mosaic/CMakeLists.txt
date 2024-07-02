@@ -1,8 +1,6 @@
-# OpenCV
-find_package(OpenCV)
-
 # CUDA
 include_directories("${CMAKE_SOURCE_DIR}/include/mosaic")
+include_directories("${CMAKE_SOURCE_DIR}/include/Common")
 message(STATUS "Platform in use: ${CMAKE_SOURCE_DIR}")
 add_library(mosaic STATIC
     "mosaic.cu"
@@ -19,7 +17,6 @@ endif()
 
 target_link_libraries(mosaic
     PUBLIC
-        ${OpenCV_LIBS}
         cuda
         npps
         nppisu_static
@@ -27,6 +24,7 @@ target_link_libraries(mosaic
         nppc_static
         culibos
         pthread
+        freeimage
 )
 set_property(TARGET ${target_name} 
         PROPERTY CUDA_SEPARABLE_COMPILATION ON)

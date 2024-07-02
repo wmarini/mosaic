@@ -1,7 +1,12 @@
 #include "mosaic.h"
+#include "UtilNPP/Exceptions.h"
+#include "UtilNPP/ImageIO.h"
+#include "UtilNPP/ImagesCPU.h"
+#include "UtilNPP/ImagesNPP.h"
 #include <npp.h>
+#include "helper_cuda.h"
+#include "helper_string.h"
 #include <cuda_runtime.h>
-// #include <opencv2/opencv.hpp>
 #include <filesystem>
 #include <iostream>
 
@@ -28,31 +33,44 @@ void ProcessMosaic(const MosaicConfig&& config)
     std::cout << "# Images to be processed: " 
         << image_list.size() << std::endl;
 
-    // u sing namespace cv;
-    // //Create an 8 bit single channel image
-    // Mat img = imread("data/lenna.png", IMREAD_GRAYSCALE );
-    // std::cout << img.size() << std::endl;
-    // const std::size_t img_size = img.total() * img.elemSize();
+    // declare a host image object for an 8-bit grayscale image
+    npp::ImageCPU_8u_C1 oHostSrc;
+    // load gray-scale image from disk
+    npp::loadImage("/home/wmarini/projects/gpulab/game/mosaic/data/lenna-gray.png", oHostSrc);
+    // declare a device image and copy construct from the host image,
+    // i.e. upload host to device
+    npp::ImageNPP_8u_C1 oDeviceSrc(oHostSrc);
 
-    // Npp8u* dSrc;
-    // cudaMalloc<Npp8u>(&dSrc, img_size);
+    // create struct with box-filter mask size
+    NppiSize oMaskSize = {5, 5};
 
-    // Npp8u* dDst;
-    // cudaMalloc<Npp8u>(&dDst, img_size);
+    NppiSize oSrcSize = {(int)oDeviceSrc.width(), (int)oDeviceSrc.height()};
+    NppiPoint oSrcOffset = {0, 0};
 
-    // cudaMemcpy(dSrc, img.data, img_size, cudaMemcpyHostToDevice);
+    // create struct with ROI size
+    NppiSize oSizeROI = {(int)oDeviceSrc.width(), (int)oDeviceSrc.height()};
+    // allocate device image of appropriately reduced size
+    npp::ImageNPP_8u_C1 oDeviceDst(oSizeROI.width, oSizeROI.height);
+    // set anchor point inside the mask to (oMaskSize.width / 2,
+    // oMaskSize.height / 2) It should round down when odd
+    NppiPoint oAnchor = {oMaskSize.width / 2, oMaskSize.height / 2};
 
-    // NppiSize size = {img.cols, img.rows};
-    // const Npp8u value = 150;
+    // run box filter
+    NPP_CHECK_NPP(nppiFilterBoxBorder_8u_C1R(
+        oDeviceSrc.data(), oDeviceSrc.pitch(), oSrcSize, oSrcOffset,
+        oDeviceDst.data(), oDeviceDst.pitch(), oSizeROI, oMaskSize, oAnchor,
+        NPP_BORDER_REPLICATE));
 
-    // nppiAddC_8u_C1IRSfs(value, dSrc, img.step, size, 1);
+    // declare a host image for the result
+    npp::ImageCPU_8u_C1 oHostDst(oDeviceDst.size());
+    // and copy the device result data into it
+    oDeviceDst.copyTo(oHostDst.data(), oHostDst.pitch());
+    std::string sResultFilename = "/home/wmarini/projects/gpulab/game/mosaic/data/lenna-gray-out.png";
+    npp::saveImage(sResultFilename, oHostDst);
+    std::cout << "Saved image: " << sResultFilename << std::endl;
 
-    // cudaMemcpy(img.data, dDst, img_size, cudaMemcpyDeviceToHost);
-
-    // imwrite("data/lenna_out.png", img);
-
-    // cudaFree(dSrc);
-    // cudaFree(dDst);
+    nppiFree(oDeviceSrc.data());
+    nppiFree(oDeviceDst.data());
 }
 
 }

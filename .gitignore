@@ -32,6 +32,7 @@
 *.app
 
 build/
+build-debug/
 
 data/
 !data/lenna.png

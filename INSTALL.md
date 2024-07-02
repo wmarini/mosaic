@@ -24,7 +24,7 @@ cmake -DCMAKE_BUILD_TYPE="Release" ..
 
 ```bash
 cd build/
-cmake -G Ninja -DCMAKE_CUDA_FLAGS="-arch=sm_50" -DCMAKE_BUILD_TYPE="Release" ..
+cmake -G Ninja -DCMAKE_BUILD_TYPE="Debug" ..
 ```
 
 ## Executing Mosaic

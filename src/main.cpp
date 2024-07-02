@@ -21,7 +21,7 @@ void PrintHeader()
            "This is the Capstone project for the Coursera course \n"
            "CUDA at Scale for the Enterprise\n"
            "https://www.coursera.org/learn/cuda-at-scale-for-the-enterprise\n"
-           "This course is part of GPU Programming Speciaization - John Hopkins University\n"
+           "This course is part of GPU Programming Specialization - John Hopkins University\n"
            "https://www.coursera.org/specializations/gpu-programming\n\n";
 }
 
