@@ -28,7 +28,7 @@ void ProcessMosaic(const MosaicConfig&& config)
     std::cout << "# Images to be processed: " 
         << image_list.size() << std::endl;
 
-    // using namespace cv;
+    // u sing namespace cv;
     // //Create an 8 bit single channel image
     // Mat img = imread("data/lenna.png", IMREAD_GRAYSCALE );
     // std::cout << img.size() << std::endl;

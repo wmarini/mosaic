@@ -1,8 +1,5 @@
 # OpenCV
-find_package(OpenCV REQUIRED)
-include_directories(${OpenCV_INCLUDE_DIRS})
-link_directories(${OpenCV_LIB_DIR})
-# link_libraries(${OpenCV_LIBS})
+find_package(OpenCV)
 
 # CUDA
 include_directories("${CMAKE_SOURCE_DIR}/include/mosaic")
@@ -12,22 +9,24 @@ add_library(mosaic STATIC
     "common.cu"
 )
 
-# if(CMAKE_CXX_COMPILER_VERSION VERSION_GREATER_EQUAL 11)
-#     target_compile_features(mosaic PUBLIC cxx_std_17)
-# else()
-#     target_compile_features(mosaic PUBLIC cxx_std_14)
-# endif()
-target_compile_features(mosaic PUBLIC cxx_std_17)
+set(CMAKE_POSITION_INDEPENDENT_CODE ON)
+
+if(CMAKE_CXX_COMPILER_VERSION VERSION_GREATER_EQUAL 11)
+    target_compile_features(mosaic PUBLIC cxx_std_17)
+else()
+    target_compile_features(mosaic PUBLIC cxx_std_14)
+endif()
 
 target_link_libraries(mosaic
     PUBLIC
+        ${OpenCV_LIBS}
         cuda
         npps
         nppisu_static
         nppif_static
         nppc_static
         culibos
-        # ${OpenCV_LIBS}
+        pthread
 )
 set_property(TARGET ${target_name} 
         PROPERTY CUDA_SEPARABLE_COMPILATION ON)
