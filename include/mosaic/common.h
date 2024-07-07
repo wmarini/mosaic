@@ -15,6 +15,7 @@ struct CudaVersion {
 __host__ void check(cudaError_t result, char const *const func, const char *const file, int const line);
 __host__ CudaVersion CUDAVersion();
 __host__ CudaVersion NPPVersion();
+__host__ std::size_t GetDeviceCount();
 
 } // namespace common
 

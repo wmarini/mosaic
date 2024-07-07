@@ -7,13 +7,14 @@
 
 namespace mosaic {
 
-using ImageList = std::vector<std::string>;
-
 struct MosaicConfig {
-    std::string images_path{"./data/"};
+    std::size_t kernel_size{5};
 };
 
-__host__ void ProcessMosaic(const MosaicConfig&& config);
+__host__ void ProcessMosaic(
+        const MosaicConfig& config, 
+        const std::string&, const std::string&);
+
 
 } // namespace mosaic
 

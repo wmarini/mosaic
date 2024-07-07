@@ -36,4 +36,11 @@ __host__ CudaVersion NPPVersion()
                 CudaVersion{0,0};
 }
 
+__host__ std::size_t GetDeviceCount()
+{
+    int counter = 0;
+    CHECK_CUDA_ERROR(cudaGetDeviceCount(&counter));
+    return static_cast<std::size_t>(counter);
+}
+
 } // namespace common

@@ -31,9 +31,8 @@ function(add_program target_name)
     set_property(TARGET ${target_name} 
         PROPERTY CUDA_SEPARABLE_COMPILATION ON)
 	target_link_libraries(${target_name}
-		PRIVATE 
-			mosaic
-            cuda)
+		PRIVATE
+			mosaic)
 endfunction()
 
 

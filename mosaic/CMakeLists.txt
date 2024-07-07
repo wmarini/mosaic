@@ -16,7 +16,7 @@ else()
 endif()
 
 target_link_libraries(mosaic
-    PUBLIC
+    PRIVATE
         cuda
         npps
         nppisu_static

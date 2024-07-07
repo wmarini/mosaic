@@ -1,16 +1,29 @@
-#include "appexception.h"
-#include "mosaic/mosaic.h"
-#include <iostream>
+#include "appmosaic.h"
 
 namespace {
 
+void CheckCUDADevice()
+{
+    if (common::GetDeviceCount() == 0)
+      throw app::AppException("No CUDA device found");
+}
+
 void Run(int argc, char* argv[]) 
 {
+  CheckCUDADevice();
+
   std::cout << "Argc: " << argc << std::endl;
   for (int i = 1; i < argc; ++i) {
     std::cout << "Argv[" << i << "]: " << argv[i] << std::endl;
   }
-  mosaic::ProcessMosaic(mosaic::MosaicConfig{});
+  mosaic::ProcessMosaic(
+      mosaic::MosaicConfig{},
+      "data/DSC06599.jpg",
+      "data/DSC06599_out.jpg");
+  mosaic::ProcessMosaic(
+      mosaic::MosaicConfig{},
+      "data/DSC06711.jpg",
+      "data/DSC06711_out.jpg");
 }
 
 void PrintHeader()
