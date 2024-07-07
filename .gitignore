@@ -35,7 +35,7 @@ build/
 build-debug/
 
 data/
-!data/lenna.png
+!data/*.jpg
 !data/.gitkeep
 
 .git/
