@@ -34,10 +34,6 @@
 build/
 build-debug/
 
-data/
-!data/*.jpg
-!data/.gitkeep
-
 .git/
 .vscode/
 
