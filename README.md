@@ -39,16 +39,16 @@ Check out the [INSTALL](https://github.com/wmarini/mosaic/blob/main/INSTALL.md) 
 ## Running Mosaic
 
 ![lick observatory](https://github.com/wmarini/mosaic/blob/main/data/DSC06580.jpg)  
-![lick observatory high pass](https://github.com/wmarini/mosaic/blob/main/data/DSC06580_out.jpg)  
+![lick observatory high pass](https://github.com/wmarini/mosaic/blob/main/data/DSC06580_out.pgm)  
 
 ![santa cruz surf museum](https://github.com/wmarini/mosaic/blob/main/data/DSC06609.jpg)  
-![santa cruz surf museum high pass](https://github.com/wmarini/mosaic/blob/main/data/DSC06609_out.jpg)  
+![santa cruz surf museum high pass](https://github.com/wmarini/mosaic/blob/main/data/DSC06609_out.pgm)  
 
 ![santa cruz surfing statue](https://github.com/wmarini/mosaic/blob/main/data/DSC06628.jpg)  
-![santa cruz surfing statue high pass](https://github.com/wmarini/mosaic/blob/main/data/DSC06628_out.jpg)  
+![santa cruz surfing statue high pass](https://github.com/wmarini/mosaic/blob/main/data/DSC06628_out.pgm)  
 
 ![oakand bay bridge](https://github.com/wmarini/mosaic/blob/main/data/DSC06834.jpg)  
-![oakand bay bridge high pass](https://github.com/wmarini/mosaic/blob/main/data/DSC06834_out.jpg)  
+![oakand bay bridge high pass](https://github.com/wmarini/mosaic/blob/main/data/DSC06834_out.pgm)  
 
 
 ## Rubrics
