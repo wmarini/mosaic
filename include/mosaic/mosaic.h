@@ -11,7 +11,7 @@ struct MosaicConfig {
     std::size_t kernel_size{5};
 };
 
-__host__ void ProcessMosaic(
+void ProcessMosaic(
         const MosaicConfig& config, 
         const std::string&, const std::string&);
 

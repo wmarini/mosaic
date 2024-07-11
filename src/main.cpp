@@ -2,28 +2,41 @@
 
 namespace {
 
+void Usage()
+{
+    std::cout << "Usage: mosaic <input file> <output file>\n";
+}
+
 void CheckCUDADevice()
 {
     if (common::GetDeviceCount() == 0)
       throw app::AppException("No CUDA device found");
 }
 
+void CheckArguments(int argc)
+{
+    if (argc < 2) {
+      Usage();
+      throw app::AppException("No input files provided");
+    }
+}
+
+app::ImagePair ParseArguments(int argc, char* argv[])
+{
+    return std::make_tuple(argv[1], argv[2]);
+}
+
 void Run(int argc, char* argv[]) 
 {
+  CheckArguments(argc);
   CheckCUDADevice();
 
-  std::cout << "Argc: " << argc << std::endl;
-  for (int i = 1; i < argc; ++i) {
-    std::cout << "Argv[" << i << "]: " << argv[i] << std::endl;
-  }
+  auto [in_fn, out_fn] = ParseArguments(argc, argv);
+
   mosaic::ProcessMosaic(
       mosaic::MosaicConfig{},
-      "data/DSC06599.jpg",
-      "data/DSC06599_out.jpg");
-  mosaic::ProcessMosaic(
-      mosaic::MosaicConfig{},
-      "data/DSC06711.jpg",
-      "data/DSC06711_out.jpg");
+      in_fn,
+      out_fn);
 }
 
 void PrintHeader()

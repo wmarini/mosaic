@@ -1,0 +1,319 @@
+Processing Image: data/DSC06580.jpg -> data/DSC06580_out.jpg
+== Mosaic ==
+
+This is the Capstone project for the Coursera course 
+CUDA at Scale for the Enterprise
+https://www.coursera.org/learn/cuda-at-scale-for-the-enterprise
+This course is part of GPU Programming Specialization - John Hopkins University
+https://www.coursera.org/specializations/gpu-programming
+
+----------------------------------------
+CUDA version: 7.5
+NPP version: 11.5
+----------------------------------------
+Loaded image: data/DSC06580.jpg
+data/DSC06580.jpg image info:
+  width: 480
+  height: 480
+  pitch: 480
+ImageNPP image info:
+  width: 480
+  height: 480
+  pitch: 512
+data/DSC06580_out.jpg image info:
+  width: 480
+  height: 480
+  pitch: 480
+Saved image: data/DSC06580_out.jpg
+----------------------------------------
+== Mosaic ==
+Processing Image: data/DSC06587.jpg -> data/DSC06587_out.jpg
+== Mosaic ==
+
+This is the Capstone project for the Coursera course 
+CUDA at Scale for the Enterprise
+https://www.coursera.org/learn/cuda-at-scale-for-the-enterprise
+This course is part of GPU Programming Specialization - John Hopkins University
+https://www.coursera.org/specializations/gpu-programming
+
+----------------------------------------
+CUDA version: 7.5
+NPP version: 11.5
+----------------------------------------
+Loaded image: data/DSC06587.jpg
+data/DSC06587.jpg image info:
+  width: 3982
+  height: 3982
+  pitch: 3982
+ImageNPP image info:
+  width: 3982
+  height: 3982
+  pitch: 4096
+data/DSC06587_out.jpg image info:
+  width: 3982
+  height: 3982
+  pitch: 3982
+Saved image: data/DSC06587_out.jpg
+----------------------------------------
+== Mosaic ==
+Processing Image: data/DSC06599.jpg -> data/DSC06599_out.jpg
+== Mosaic ==
+
+This is the Capstone project for the Coursera course 
+CUDA at Scale for the Enterprise
+https://www.coursera.org/learn/cuda-at-scale-for-the-enterprise
+This course is part of GPU Programming Specialization - John Hopkins University
+https://www.coursera.org/specializations/gpu-programming
+
+----------------------------------------
+CUDA version: 7.5
+NPP version: 11.5
+----------------------------------------
+Loaded image: data/DSC06599.jpg
+data/DSC06599.jpg image info:
+  width: 6000
+  height: 4000
+  pitch: 6000
+ImageNPP image info:
+  width: 6000
+  height: 4000
+  pitch: 6144
+data/DSC06599_out.jpg image info:
+  width: 6000
+  height: 4000
+  pitch: 6000
+Saved image: data/DSC06599_out.jpg
+----------------------------------------
+== Mosaic ==
+Processing Image: data/DSC06609.jpg -> data/DSC06609_out.jpg
+== Mosaic ==
+
+This is the Capstone project for the Coursera course 
+CUDA at Scale for the Enterprise
+https://www.coursera.org/learn/cuda-at-scale-for-the-enterprise
+This course is part of GPU Programming Specialization - John Hopkins University
+https://www.coursera.org/specializations/gpu-programming
+
+----------------------------------------
+CUDA version: 7.5
+NPP version: 11.5
+----------------------------------------
+Loaded image: data/DSC06609.jpg
+data/DSC06609.jpg image info:
+  width: 4000
+  height: 5272
+  pitch: 4000
+ImageNPP image info:
+  width: 4000
+  height: 5272
+  pitch: 4096
+data/DSC06609_out.jpg image info:
+  width: 4000
+  height: 5272
+  pitch: 4000
+Saved image: data/DSC06609_out.jpg
+----------------------------------------
+== Mosaic ==
+Processing Image: data/DSC06622.jpg -> data/DSC06622_out.jpg
+== Mosaic ==
+
+This is the Capstone project for the Coursera course 
+CUDA at Scale for the Enterprise
+https://www.coursera.org/learn/cuda-at-scale-for-the-enterprise
+This course is part of GPU Programming Specialization - John Hopkins University
+https://www.coursera.org/specializations/gpu-programming
+
+----------------------------------------
+CUDA version: 7.5
+NPP version: 11.5
+----------------------------------------
+Loaded image: data/DSC06622.jpg
+data/DSC06622.jpg image info:
+  width: 2931
+  height: 2932
+  pitch: 2931
+ImageNPP image info:
+  width: 2931
+  height: 2932
+  pitch: 3072
+data/DSC06622_out.jpg image info:
+  width: 2931
+  height: 2932
+  pitch: 2931
+Saved image: data/DSC06622_out.jpg
+----------------------------------------
+== Mosaic ==
+Processing Image: data/DSC06628.jpg -> data/DSC06628_out.jpg
+== Mosaic ==
+
+This is the Capstone project for the Coursera course 
+CUDA at Scale for the Enterprise
+https://www.coursera.org/learn/cuda-at-scale-for-the-enterprise
+This course is part of GPU Programming Specialization - John Hopkins University
+https://www.coursera.org/specializations/gpu-programming
+
+----------------------------------------
+CUDA version: 7.5
+NPP version: 11.5
+----------------------------------------
+Loaded image: data/DSC06628.jpg
+data/DSC06628.jpg image info:
+  width: 3290
+  height: 3289
+  pitch: 3290
+ImageNPP image info:
+  width: 3290
+  height: 3289
+  pitch: 3584
+data/DSC06628_out.jpg image info:
+  width: 3290
+  height: 3289
+  pitch: 3290
+Saved image: data/DSC06628_out.jpg
+----------------------------------------
+== Mosaic ==
+Processing Image: data/DSC06666.jpg -> data/DSC06666_out.jpg
+== Mosaic ==
+
+This is the Capstone project for the Coursera course 
+CUDA at Scale for the Enterprise
+https://www.coursera.org/learn/cuda-at-scale-for-the-enterprise
+This course is part of GPU Programming Specialization - John Hopkins University
+https://www.coursera.org/specializations/gpu-programming
+
+----------------------------------------
+CUDA version: 7.5
+NPP version: 11.5
+----------------------------------------
+Loaded image: data/DSC06666.jpg
+data/DSC06666.jpg image info:
+  width: 2464
+  height: 2464
+  pitch: 2464
+ImageNPP image info:
+  width: 2464
+  height: 2464
+  pitch: 2560
+data/DSC06666_out.jpg image info:
+  width: 2464
+  height: 2464
+  pitch: 2464
+Saved image: data/DSC06666_out.jpg
+----------------------------------------
+== Mosaic ==
+Processing Image: data/DSC06711.jpg -> data/DSC06711_out.jpg
+== Mosaic ==
+
+This is the Capstone project for the Coursera course 
+CUDA at Scale for the Enterprise
+https://www.coursera.org/learn/cuda-at-scale-for-the-enterprise
+This course is part of GPU Programming Specialization - John Hopkins University
+https://www.coursera.org/specializations/gpu-programming
+
+----------------------------------------
+CUDA version: 7.5
+NPP version: 11.5
+----------------------------------------
+Loaded image: data/DSC06711.jpg
+data/DSC06711.jpg image info:
+  width: 671
+  height: 671
+  pitch: 671
+ImageNPP image info:
+  width: 671
+  height: 671
+  pitch: 1024
+data/DSC06711_out.jpg image info:
+  width: 671
+  height: 671
+  pitch: 671
+Saved image: data/DSC06711_out.jpg
+----------------------------------------
+== Mosaic ==
+Processing Image: data/DSC06832.jpg -> data/DSC06832_out.jpg
+== Mosaic ==
+
+This is the Capstone project for the Coursera course 
+CUDA at Scale for the Enterprise
+https://www.coursera.org/learn/cuda-at-scale-for-the-enterprise
+This course is part of GPU Programming Specialization - John Hopkins University
+https://www.coursera.org/specializations/gpu-programming
+
+----------------------------------------
+CUDA version: 7.5
+NPP version: 11.5
+----------------------------------------
+Loaded image: data/DSC06832.jpg
+data/DSC06832.jpg image info:
+  width: 3118
+  height: 3118
+  pitch: 3118
+ImageNPP image info:
+  width: 3118
+  height: 3118
+  pitch: 3584
+data/DSC06832_out.jpg image info:
+  width: 3118
+  height: 3118
+  pitch: 3118
+Saved image: data/DSC06832_out.jpg
+----------------------------------------
+== Mosaic ==
+Processing Image: data/DSC06834.jpg -> data/DSC06834_out.jpg
+== Mosaic ==
+
+This is the Capstone project for the Coursera course 
+CUDA at Scale for the Enterprise
+https://www.coursera.org/learn/cuda-at-scale-for-the-enterprise
+This course is part of GPU Programming Specialization - John Hopkins University
+https://www.coursera.org/specializations/gpu-programming
+
+----------------------------------------
+CUDA version: 7.5
+NPP version: 11.5
+----------------------------------------
+Loaded image: data/DSC06834.jpg
+data/DSC06834.jpg image info:
+  width: 1441
+  height: 1441
+  pitch: 1441
+ImageNPP image info:
+  width: 1441
+  height: 1441
+  pitch: 1536
+data/DSC06834_out.jpg image info:
+  width: 1441
+  height: 1441
+  pitch: 1441
+Saved image: data/DSC06834_out.jpg
+----------------------------------------
+== Mosaic ==
+Processing Image: data/DSC06921.jpg -> data/DSC06921_out.jpg
+== Mosaic ==
+
+This is the Capstone project for the Coursera course 
+CUDA at Scale for the Enterprise
+https://www.coursera.org/learn/cuda-at-scale-for-the-enterprise
+This course is part of GPU Programming Specialization - John Hopkins University
+https://www.coursera.org/specializations/gpu-programming
+
+----------------------------------------
+CUDA version: 7.5
+NPP version: 11.5
+----------------------------------------
+Loaded image: data/DSC06921.jpg
+data/DSC06921.jpg image info:
+  width: 3531
+  height: 3531
+  pitch: 3531
+ImageNPP image info:
+  width: 3531
+  height: 3531
+  pitch: 3584
+data/DSC06921_out.jpg image info:
+  width: 3531
+  height: 3531
+  pitch: 3531
+Saved image: data/DSC06921_out.jpg
+----------------------------------------
+== Mosaic ==

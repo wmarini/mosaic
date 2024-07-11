@@ -1,16 +1,10 @@
-# Installing and Building Mosaic
-
-## Dependencies
-
-*Mosaic* has the following dependencies:
-
-- [CUDA Toolkit](https://developer.nvidia.com/cuda-downloads)
+# Building Mosaic
 
 ## Clone the Github repository
 
 ```bash
-git clone 'https://github.com/wmarini/mosaic.git'
-cd mosaic
+$ git clone 'https://github.com/wmarini/mosaic.git'
+$ cd mosaic
 ```
 
 You can also download the [Zip](https://github.com) and extract in your local machine.  
@@ -18,18 +12,18 @@ You can also download the [Zip](https://github.com) and extract in your local ma
 ## Build the program
 
 ```bash
-mkdir build && cd build/
-cmake -DCMAKE_BUILD_TYPE="Release" ..
+$ mkdir build && cd build/
+$ cmake -DCMAKE_BUILD_TYPE="Release" ..
 ```
 
 ```bash
-cd build/
-cmake -G Ninja -DCMAKE_BUILD_TYPE="Debug" ..
+$ cd build/
+$ cmake -G Ninja -DCMAKE_BUILD_TYPE="Debug" ..
 ```
 
 ## Executing Mosaic
 
 ```bash
-cd 
-run.sh
+$ cd 
+# . run.sh
 ```

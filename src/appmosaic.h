@@ -4,11 +4,14 @@
 #include "appexception.h"
 #include "mosaic/mosaic.h"
 #include <vector>
+#include <tuple>
+#include <string>
 #include <iostream>
 
 namespace app {
 
 using ImageList = std::vector<std::string>;
+using ImagePair = std::tuple<std::string,std::string>;
 
 } // namespace app
 

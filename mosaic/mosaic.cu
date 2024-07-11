@@ -15,6 +15,17 @@ namespace mosaic {
 
 namespace {
 
+template <typename T>
+void PrintImageInfo(const T& image, const std::string& name = "")
+{
+    std::cout 
+        << name << " image info:\n"
+        << "  width: " << image.width() 
+        << "\n  height: " << image.height()
+        << "\n  pitch: " << image.pitch()
+        << std::endl;
+}
+
 inline void HighPassBorderFilter(
         const Npp8u* pSrc, Npp32s nSrcStep, NppiSize oSrcSize, NppiPoint oSrcOffset, 
         Npp8u* pDst, Npp32s nDstStep, NppiSize oSizeROI)
@@ -27,7 +38,6 @@ inline void HighPassBorderFilter(
 
 } // namespace
 
-__host__
 void ProcessMosaic(
         const MosaicConfig& config,
         const std::string& in_image_fname,
@@ -38,9 +48,13 @@ void ProcessMosaic(
         npp::ImageCPU_8u_C1 oHostSrc;
         // load gray-scale image from disk
         npp::loadImage(in_image_fname, oHostSrc);
+        std::cout << "Loaded image: " << in_image_fname << std::endl;
+        PrintImageInfo(oHostSrc, in_image_fname);
+
         // declare a device image and copy construct from the host image,
         // i.e. upload host to device
         npp::ImageNPP_8u_C1 oDeviceSrc(oHostSrc);
+        PrintImageInfo(oDeviceSrc, "ImageNPP");
 
         // create struct with box-filter mask size
         NppiSize oMaskSize = {5, 5};
@@ -52,9 +66,6 @@ void ProcessMosaic(
         NppiSize oSizeROI = {(int)oDeviceSrc.width(), (int)oDeviceSrc.height()};
         // allocate device image of appropriately reduced size
         npp::ImageNPP_8u_C1 oDeviceDst(oSizeROI.width, oSizeROI.height);
-        // set anchor point inside the mask to (oMaskSize.width / 2,
-        // oMaskSize.height / 2) It should round down when odd
-        NppiPoint oAnchor = {oMaskSize.width / 2, oMaskSize.height / 2};
 
         // run box filter
         HighPassBorderFilter(
@@ -66,8 +77,10 @@ void ProcessMosaic(
         // and copy the device result data into it
         oDeviceDst.copyTo(oHostDst.data(), oHostDst.pitch());
         npp::saveImage(out_image_fname, oHostDst);
+        PrintImageInfo(oHostDst, out_image_fname);
         std::cout << "Saved image: " << out_image_fname << std::endl;
 
+        //-CHECK_CUDA(cudaDeviceSynchronize());
         nppiFree(oDeviceSrc.data());
         nppiFree(oDeviceDst.data());
         cudaDeviceReset();
